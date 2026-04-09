@@ -1,0 +1,136 @@
+body{
+    background-color: rgba(207, 193, 174, 0.895);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+}
+
+.Header{
+    font-size: small;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgba(50, 31, 31, 0.787);
+}
+
+.Content{
+   border-color: rgba(66, 32, 8, 0.913);
+   background-color: rgb(255, 255, 245);
+   border-style: solid;
+   border-width: 3px;
+   border-radius: 1rem;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   color: rgba(66, 32, 8, 0.913);
+}
+
+.Social{
+    font-size: small;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgba(66, 32, 8, 0.913);
+}
+.Links {
+    display: flex;
+    justify-content: center;
+    column-gap: 1rem;
+}
+.Social a{
+    color: rgba(66, 32, 8, 0.913); 
+    display: flex ;
+    column-gap: 10px;
+}
+.Social svg {
+    width: 20px;
+    height: 20px;
+}
+.Main_Pictures {
+    display: flex;
+    justify-content: center;
+    column-gap: 2rem;
+}
+
+.Picture{
+    width: 300px;
+    border-image: round;
+    border-radius: 1rem;
+}
+
+button{
+    background-color: rgba(237, 214, 180, 0.913);
+    color: rgba(66, 32, 8, 0.913);
+    font-size: medium;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.btn {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+button:hover{
+    background-color: rgb(79, 62, 62);
+    color: #fff;
+}
+
+.btn > *:first-child{
+    display: flex;
+    align-items: center;
+    margin-inline: 5px;
+    margin-right: auto;
+}
+
+#modeButton{
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+}
+
+#modeButton svg{
+    width: 25px;
+    height: 25px;
+}
+
+#modeButton path{
+    fill: rgb(40, 25, 25);
+}
+
+.darkMode{
+    background-color: rgb(40, 25, 25);
+    color:#fff;
+}
+
+.darkMode .Header{
+    color: #fff;
+}
+
+.darkMode .Content{
+    background-color: rgb(79, 62, 62);
+    color: #fff;
+    border-color: #fff;
+}
+
+.darkMode .Social{
+    color: #fff;
+}
+
+.darkMode .Social a{
+    color: #fff;
+}
+
+.darkMode button{
+    background-color: rgb(98, 74, 74);
+    color: #fff;
+}
+
+.darkMode button:hover{
+    background-color: rgba(237, 214, 180, 0.913);
+    color: rgba(66, 32, 8, 0.913);
+}
+
+.darkMode #modeButton path{
+    fill: #fff;
+}
