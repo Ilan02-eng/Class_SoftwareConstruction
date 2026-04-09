@@ -6,7 +6,8 @@
  */
 
 "use strict";
-
+//Función acepta strings, regresa char
+//Encuentra los char que no se repiten en un string
 function firstNonRepeating(string) {
   const conteo = {};
 
@@ -21,9 +22,10 @@ function firstNonRepeating(string) {
   }
   return undefined;
 }
+//console.log(firstNonRepeating('abacddbec'));}
 
-//console.log(firstNonRepeating('abacddbec'));
-
+//Acepta arrays, regresa arrays
+//Ordena un array de números de menos a mayor basado en el algoritmo bubble sort
 function bubbleSort(arr) {
   const n = arr.length;
   for (let i = 0; i < n - 1; i++) {
@@ -40,6 +42,8 @@ function bubbleSort(arr) {
 
 //bubbleSort([6, 4, 2])
 
+//La función acepta arrays y regresa un nuevo array
+//La función invierte los elementos de un array y regresa el array ordenado como un nuevo array
 function invertArray(arr) {
   let newArray = [];
   let j = 0;
@@ -50,6 +54,8 @@ function invertArray(arr) {
   return newArray;
 }
 
+//La función acepta arrays y regresa el array modificado
+//La función invierte los elementos y regresa el array ordenado
 function invertArrayInplace(arr) {
   let start = 0;
   let end = arr.length - 1;
@@ -63,6 +69,8 @@ function invertArrayInplace(arr) {
   return arr;
 }
 
+//La función recive strings y regresa un string
+//La función capitaliza la primera letra de cadenas de arrays
 function capitalize(text) {
   if (text === "") {
     return "";
@@ -77,10 +85,11 @@ function capitalize(text) {
   }
   return result;
 }
-
 //console.log(capitalize("hola me llamo ilan"));
 //console.log(capitalize(""));
 
+//Recibe dos números y regresa uno
+//La función busca el multiplo común denominador de dos números.
 function mcd(a, b) {
   while (b != 0) {
     let residuo = a % b;
@@ -89,10 +98,11 @@ function mcd(a, b) {
   }
   return a;
 }
-
 //console.log(mcd(40, 12)); //4
 //console.log(mcd(12, 3)); //3
 
+//Recibe strings y regresa strings
+//La función convierte un string a hacker speak
 function hackerSpeak(text) {
   let finalText = "";
   const map = {
@@ -107,9 +117,10 @@ function hackerSpeak(text) {
   }
   return finalText;
 }
-
 //console.log(hackerSpeak("JavaScript es divertido"));
 
+//Recibe un número y regresa un array
+//Encuentra los factores de un número proporcionado y los regresa como un array
 function factorize(num) {
   const factor = [];
   for (let i = 1; i <= num; i++) {
@@ -119,10 +130,11 @@ function factorize(num) {
   }
   return factor;
 }
-
 //console.log(factorize(12))
 //console.log(factorize(20))
 
+//Acepta arrays y regresa un array
+//La función detecta los elementos en un array y no incluye los duplicados
 function deduplicate(arr) {
   const seen = {};
   const result = [];
@@ -135,9 +147,10 @@ function deduplicate(arr) {
   }
   return result;
 }
-
 //console.log(deduplicate([1, 0, 1, 1, 0, 0]));
 
+//Recibe un array de strings y regresa un número
+//LA función encuentra la longitud del string más corto de un array
 function findShortestString(string) {
   if (string.length === 0) return 0;
   let min = string[0].length;
@@ -149,6 +162,8 @@ function findShortestString(string) {
   return min;
 }
 
+//Recibe un string y regresa un valor booleano
+//La función revisa sin un string es un palíndromo
 function isPalindrome(string) {
   const text = string.toLowerCase();
   let palindromo = true;
@@ -165,6 +180,8 @@ function isPalindrome(string) {
 // console.log(isPalindrome("Salas"));
 // console.log(isPalindrome("Hola"));
 
+//Recibe un array de strings y regresa un nuevo array ordenado
+//La función ordena alfabéticamente los strings de un array utilizando Quick Sort
 function sortStrings(string) {
   if (string.length <= 1) {
     return string;
@@ -183,6 +200,8 @@ function sortStrings(string) {
   return [...sortStrings(left), pivot, ...sortStrings(right)];
 }
 
+//Recibe un array de números y regresa un array
+//La función calcula la media y moda de los números de un array
 function stats(numbers) {
   let mean = 0;
   let mode = 0;
@@ -201,7 +220,7 @@ function stats(numbers) {
     conteo[num] = (conteo[num] || 0) + 1;
     if (conteo[num] > repetitions) {
       repetitions = conteo[num];
-      mode = Number(num);
+      mode = num;
     }
   }
   return [mean, mode];
@@ -210,6 +229,8 @@ function stats(numbers) {
 // console.log(stats([8, 4, 2, 6, 8, 13, 17, 2, 4, 8])) //[7.2, 8]
 // console.log(stats([])); //[0, 0]
 
+//Recibe un array de strings y regresa un string
+//La función encuentra el string que aparece más veces en el array
 function popularString(list) {
   if (list.length === 0) return "";
   const frequent = {};
@@ -225,6 +246,8 @@ function popularString(list) {
   return stringMax;
 }
 
+//Recibe un número y regresa un valor booleano
+//La función revisa si el número es una potencia de 2
 function isPowerOf2(n) {
   if (n <= 0) return false;
   while (n % 2 === 0) {
@@ -233,6 +256,8 @@ function isPowerOf2(n) {
   return n === 1;
 }
 
+//Recibe un array de números y regresa un array nuevo
+//La función ordena los números de manera descendiente con un algoritmo Quick Sort
 function sortDescending(nums) {
   if (nums.length <= 1) {
     return nums;
